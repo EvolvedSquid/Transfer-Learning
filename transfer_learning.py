@@ -42,7 +42,7 @@ for letter in alphabet:
 print(len(alphabet), len(t_alphabet), len(names))
 
 # Define training data
-x_train = to_mnist.convert_mass('Images/Raw/', '.png', names, (28, 28), True)
+x_train = to_mnist.convert_mass('Images/', '.png', names, (28, 28), True)
 y_train = to_mnist.one_hot_classes([letter for letter in alphabet], [letter for letter in t_alphabet])
 
 print(x_train); print(y_train)
@@ -57,5 +57,5 @@ model.fit(x_train, y_train,
 
 # Evaluate model
 for letter in alphabet:
-    test = to_mnist.to_mnist(f'Images/Raw/letter{letter}t.png', True).reshape((1, 28, 28, 1))
+    test = to_mnist.to_mnist(f'Images/letter{letter}t.png', True).reshape((1, 28, 28, 1))
     print(alphabet[model.predict(test).argmax()], np.amax(model.predict(test)), letter)
