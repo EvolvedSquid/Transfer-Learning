@@ -1,15 +1,3 @@
-"""
-Transfer Learning with MNIST and Letters \n
-
-Takes a convolutional model pretrained on the MNIST dataset, removes final dense and activation layer and creates
-a new dense layer with 26 neurons.  Then the final layer is trained to recognize 28x28 handwritten letters, with only
-THREE training examples per letter. \n
-
-The model achieves approximately a 73% accuracy.  This number is expected to improve dramatically if more than 3 training
-examples per letter is supplied. \n
-
-Can be used with other pretrained neural networks to get high accuracy on unseen data, without a large amount of training data.
-"""
 from keras.datasets import fashion_mnist
 from keras.models import Model, load_model
 from keras.layers import Input, Conv2D, Dense, MaxPooling2D, Conv2DTranspose, Lambda, Reshape
