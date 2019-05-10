@@ -1,7 +1,6 @@
-"""
-Converts a grayscale image into a numpy array of values normalized to 0-1. \n
-Also can convert a list of classes into a one hot encoded version of it in an np array. \n
-"""
+# Converts a grayscale image into a numpy array of values normalized to 0-1.
+# Also can convert a list of classes into a one hot encoded version of it in an np array.
+
 from PIL import Image
 import numpy as np
 
